@@ -1,0 +1,24 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "difference calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T-Grigory/frontend-project-46.git"
+  },
+  "keywords": [],
+  "author": "Grigory Tydykov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T-Grigory/frontend-project-46/issues"
+  },
+  "homepage": "https://github.com/T-Grigory/frontend-project-46#readme",
+  "dependencies": {
+    "commander": "^11.0.0"
+  }
+}
