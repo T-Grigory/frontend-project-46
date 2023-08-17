@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/T-Grigory/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^11.0.0"
+    "commander": "^11.0.0",
+    "lodash": "^4.17.21"
   }
 }
