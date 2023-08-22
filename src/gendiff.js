@@ -18,14 +18,14 @@ const gendiff = (filepath1, filepath2) => {
 
   const formattedData = keys.reduce((accumulator, key) => {
     if (_.has(data1, key) && !_.has(data2, key)) {
-      accumulator.push(`- ${key}: ${data1[key]}`);
+      accumulator.push(`  - ${key}: ${data1[key]}`);
     } else if (!_.has(data1, key) && _.has(data2, key)) {
-      accumulator.push(`+ ${key}: ${data2[key]}`);
+      accumulator.push(`  + ${key}: ${data2[key]}`);
     } else if (data1[key] !== data2[key]) {
-      accumulator.push(`- ${key}: ${data1[key]}`);
-      accumulator.push(`+ ${key}: ${data2[key]}`);
+      accumulator.push(`  - ${key}: ${data1[key]}`);
+      accumulator.push(`  + ${key}: ${data2[key]}`);
     } else {
-      accumulator.push(`  ${key}: ${data1[key]}`);
+      accumulator.push(`    ${key}: ${data1[key]}`);
     }
     return accumulator;
   }, []);
