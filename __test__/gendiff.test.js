@@ -8,26 +8,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const directoryPath = `${__dirname}/../__fixtures__`;
 
-let expected;
+let expectedNested;
 
 beforeAll(() => {
-  expected = readFileSync(`${directoryPath}/plain.txt`).toString();
+  expectedNested = readFileSync(`${directoryPath}/nested.txt`).toString();
 });
 
-test('gendiff plain json files', () => {
+test('gendiff nested', () => {
   const actual = gendiff(
-    `${directoryPath}/file1.json`,
-    `${directoryPath}/file2.json`
+    `${directoryPath}/nested1.json`,
+    `${directoryPath}/nested2.json`
   );
 
-  expect(actual).toEqual(expected);
-});
-
-test('gendiff plain yml files', () => {
-  const actual = gendiff(
-    `${directoryPath}/file1.yml`,
-    `${directoryPath}/file2.yml`
-  );
-
-  expect(actual).toEqual(expected);
+  expect(actual).toEqual(expectedNested);
 });
